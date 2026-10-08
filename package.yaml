@@ -1,0 +1,50 @@
+name: 数据复盘师
+repo: bangwozuo/data-recap-zh
+legacy_name: 跨平台数据复盘师
+version: 0.2.0
+asset_type: prompt-only
+stage: P1
+complexity: M-L（取决于数据连接器路径，CSV 降级方案可压回 M），总估 8-14 人日
+group: 自媒体创作者
+runtime_dependencies: none
+api_key_required: false
+demand_ids:
+  - D02
+  - D11
+  - D19
+
+workflows:
+  - name: 周度数据汇总
+    id: de_media_06_wf01
+  - name: 爆款/扑街归因
+    id: de_media_06_wf02
+  - name: 下周内容策略建议
+    id: de_media_06_wf03
+  - name: 月度成长报告
+    id: de_media_06_wf04
+
+skills:
+  - id: dashboard-interpret
+    name: 数据看板解读
+    family: 
+  - id: attribution-analysis
+    name: 归因分析
+    family: 
+  - id: strategy-advice-generate
+    name: 策略建议生成
+    family: 
+  - id: report-layout
+    name: 报告排版
+    family: 
+  - id: viral-structure-decode
+    name: 爆款结构拆解
+    family: 
+  - id: topic-knowledge-base
+    name: 选题知识库
+    family: 
+
+compliance:
+  ai_label_required: true
+  human_review_required: true
+  forbidden_words_check: true
+  official_api_only: true

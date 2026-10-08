@@ -1,0 +1,78 @@
+{
+  "skill_id": "de_media_06_sk05",
+  "name": "爆款结构拆解",
+  "type": "atomic",
+  "input": {
+    "type": "object",
+    "required": [
+      "sample"
+    ],
+    "properties": {
+      "sample": {
+        "type": "string",
+        "description": "素材/主题：要拆解的内容样本，或要搭框架的主题"
+      },
+      "purpose": {
+        "type": "string",
+        "description": "用途：框架将用于什么场景（可选）"
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "required": [
+      "structure",
+      "why",
+      "variants"
+    ],
+    "properties": {
+      "structure": {
+        "type": "array",
+        "description": "逐段给出功能定位",
+        "items": {
+          "type": "object",
+          "properties": {
+            "#": {
+              "type": "string"
+            },
+            "段落": {
+              "type": "string"
+            },
+            "功能定位": {
+              "type": "string"
+            },
+            "要点提示": {
+              "type": "string"
+            },
+            "时长/字数建议": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "why": {
+        "type": "string",
+        "description": "为什么这样排列"
+      },
+      "variants": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "该框架的适用变体与调整方式"
+      }
+    },
+    "x-rendered-from": "capability:generate_outline"
+  },
+  "constraints": {
+    "max_input_length": 5000,
+    "forbidden_words": [
+      "最好",
+      "第一",
+      "100%"
+    ],
+    "ai_label_required": true,
+    "human_review_required": true,
+    "external_api_required": false
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "skill_id": "de_media_06_sk01",
+  "name": "数据看板解读",
+  "type": "atomic",
+  "input": {
+    "type": "object",
+    "required": [
+      "datasets"
+    ],
+    "properties": {
+      "datasets": {
+        "type": "string",
+        "description": "多源数据：待归一的各平台/各渠道原始数据"
+      },
+      "target_metrics": {
+        "type": "string",
+        "description": "目标指标口径：希望统一成哪些指标（可选）"
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "required": [
+      "normalized",
+      "caveats"
+    ],
+    "properties": {
+      "normalized": {
+        "type": "array",
+        "description": "归一后的可比对数据",
+        "items": {
+          "type": "object",
+          "properties": {
+            "指标": {
+              "type": "string"
+            },
+            "本期": {
+              "type": "string"
+            },
+            "上期": {
+              "type": "string"
+            },
+            "环比": {
+              "type": "string"
+            },
+            "口径说明": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "caveats": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "各来源口径不一致之处与处理方式"
+      }
+    },
+    "x-rendered-from": "capability:normalize"
+  },
+  "constraints": {
+    "max_input_length": 5000,
+    "forbidden_words": [
+      "最好",
+      "第一",
+      "100%"
+    ],
+    "ai_label_required": true,
+    "human_review_required": true,
+    "external_api_required": false
+  }
+}
