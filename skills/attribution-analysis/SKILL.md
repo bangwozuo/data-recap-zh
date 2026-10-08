@@ -11,11 +11,11 @@
 | 复杂度 | `M` |
 | 阶段 | `P1` |
 | 复用度 | 高：归因引擎可泛化到 4 私域漏斗诊断 |
-| 资产形态 | 纯提示词（无运行时依赖） |
+| 资产形态 | 提示词 + Python 脚本（`scripts/attribution_analysis.py`，仅标准库） |
 
 ## 能力描述
 
-内容特征与数据表现的关联归因
+内容特征与数据表现的关联归因。量化分级口径：单因素涨粉占比 ≥ 50% 判「主引擎」、≥ 20% 判「重要因素」、不足 20% 且仅有时间重合判「存疑因素」（不写因果）；指标环比 ≥ ±30% 或比率变化 ≥ 3pp 必须进证据表；单条内容占周期播放 ≥ 60% 标注「单点爆款需验证复现」。
 
 ## 输入规格
 
@@ -31,6 +31,14 @@
 - `drivers`：因素与影响方向、幅度
 - `confidence`：本次分析的置信水平与理由
 - `next_action`：可执行的行动建议
+
+**脚本产物**（`--demo` 或 `--input` 实跑落盘，数值以此为准）：
+
+| 文件 | 内容 |
+|---|---|
+| `out/归因证据表.csv` | 驱动因素 × 方向 × 分级 × 量化证据 |
+| `out/attribution.json` | 机器可读结果（环比、系列占比、爆款占比、阈值口径） |
+| `out/归因摘要.md` | 证据链摘要（Markdown 表格） |
 
 ## 使用步骤
 
@@ -50,6 +58,15 @@
 | **Dify** | 新建应用 → 提示词编排 → 粘贴 `prompt.txt` |
 | **Claude** | 新建 Project → Instructions → 粘贴 `prompt.txt` |
 | **ChatGPT** | 新建 GPT → Instructions → 粘贴 `prompt.txt` |
+
+### 方式二：带脚本（推荐，产出真实文件）
+
+```bash
+python <SKILL_DIR>/scripts/attribution_analysis.py --input input.json --outdir out
+python <SKILL_DIR>/scripts/attribution_analysis.py --demo --outdir out   # 无输入也能看效果
+```
+
+**分工**：脚本做环比/占比/分级等**确定性计算与产物落盘**（out/ 归因证据表.csv、attribution.json、归因摘要.md）；模型做**相关与因果判别、置信度措辞、下一步建议**。数值一律以脚本输出为准。
 
 ## 边界（不做的事）
 

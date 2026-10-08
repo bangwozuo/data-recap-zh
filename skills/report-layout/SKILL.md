@@ -11,17 +11,18 @@
 | 复杂度 | `S` |
 | 阶段 | `P2` |
 | 复用度 | 中（7 商单结案报告共用排版引擎） |
-| 资产形态 | 纯提示词（无运行时依赖） |
+| 资产形态 | 提示词 + Python 脚本（`scripts/report_layout.py`，仅标准库） |
 
 ## 能力描述
 
-数据报告结构化排版输出
+数据报告结构化排版输出。量化排版口径：环比 |Δ| ≥ 10% 的指标才进「关键指标」表；系列篇均播放差距 ≥ 2 倍写「档位拉开」；峰值 ≥ 篇均 2 倍标「爆款建议复盘」、最低 < 篇均 0.5 倍标「低谷建议排查」；比率类变化用百分点（pp）表述。
 
 ## 输入规格
 
 | 字段 | 类型 | 必填 | 说明 |
 |------|------|------|------|
 | `metrics` | object | ✅ | 经营数据（流水、客流、订单等） |
+| `period` | string | ⬜ | 报告覆盖的时间范围 |
 
 ## 输出规格
 
@@ -31,6 +32,14 @@
 - `metrics_summary`：本期/上期/变化
 - `drivers`：影响结果的主要原因
 - `suggestion`：下一步可执行的动作
+
+**脚本产物**（`--demo` 或 `--input` 实跑落盘，数值以此为准）：
+
+| 文件 | 内容 |
+|---|---|
+| `out/关键指标表.csv` | 指标 × 本期 × 上期 × 变化 × 是否显著 |
+| `out/report.json` | 机器可读结果（环比、系列排名、峰值/低谷标注） |
+| `out/报告草稿.md` | 结论先行的报告骨架（Markdown 表格） |
 
 ## 使用步骤
 
@@ -50,6 +59,15 @@
 | **Dify** | 新建应用 → 提示词编排 → 粘贴 `prompt.txt` |
 | **Claude** | 新建 Project → Instructions → 粘贴 `prompt.txt` |
 | **ChatGPT** | 新建 GPT → Instructions → 粘贴 `prompt.txt` |
+
+### 方式三：带脚本（推荐，产出真实文件）
+
+```bash
+python <SKILL_DIR>/scripts/report_layout.py --input input.json --outdir out
+python <SKILL_DIR>/scripts/report_layout.py --demo --outdir out   # 无输入也能看效果
+```
+
+**分工**：脚本做**环比计算、系列排名、峰值/低谷标注、报告骨架落盘**（out/ 关键指标表.csv、report.json、报告草稿.md）；模型做**结论措辞、驱动因素语境解释、行动建议取舍**。数值一律以脚本输出为准。
 
 ## 边界（不做的事）
 

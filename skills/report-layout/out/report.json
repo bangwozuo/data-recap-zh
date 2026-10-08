@@ -1,0 +1,87 @@
+{
+  "title": "B站账号「老陈聊硬件」2026年9月数据报告",
+  "period": "2026年9月1日-9月30日",
+  "metrics": [
+    {
+      "name": "总播放量",
+      "cur": 386000,
+      "prev": 291000,
+      "unit": "次",
+      "mom_pct": 32.6,
+      "significant": true,
+      "mom_text": "+32.6%"
+    },
+    {
+      "name": "充电计划收入",
+      "cur": 1240,
+      "prev": 980,
+      "unit": "元",
+      "mom_pct": 26.5,
+      "significant": true,
+      "mom_text": "+26.5%"
+    },
+    {
+      "name": "粉丝净增",
+      "cur": 2150,
+      "prev": 1430,
+      "unit": "人",
+      "mom_pct": 50.3,
+      "significant": true,
+      "mom_text": "+50.3%"
+    },
+    {
+      "name": "投稿数",
+      "cur": 12,
+      "prev": 11,
+      "unit": "条",
+      "mom_pct": 9.1,
+      "significant": false,
+      "mom_text": "+9.1%"
+    },
+    {
+      "name": "互动率(三连/播放)",
+      "cur": 4.9,
+      "prev": 4.2,
+      "unit": "%",
+      "mom_pct": 16.7,
+      "significant": true,
+      "mom_text": "0.7pp"
+    }
+  ],
+  "series": [
+    {
+      "name": "装机实录",
+      "videos": 4,
+      "avg_plays": 52000,
+      "share_of_top": 100.0,
+      "tier": "高档"
+    },
+    {
+      "name": "硬件避坑指南",
+      "videos": 3,
+      "avg_plays": 38000,
+      "share_of_top": 73.1,
+      "tier": "高档"
+    },
+    {
+      "name": "新品快评",
+      "videos": 5,
+      "avg_plays": 21000,
+      "share_of_top": 40.4,
+      "tier": "低档"
+    }
+  ],
+  "flags": {
+    "peak_hit": true,
+    "low_worry": true,
+    "series_gap_x": 2.5,
+    "overall_avg_plays": 37000
+  },
+  "thresholds": {
+    "significant_mom_pct": 10.0,
+    "series_gap_x": 2.0,
+    "hit_mult": 2.0,
+    "low_mult": 0.5
+  },
+  "note": "数值均由本脚本计算；结论措辞与建议取舍由模型按 prompt.txt 完成"
+}

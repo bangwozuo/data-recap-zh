@@ -1,0 +1,84 @@
+{
+  "title": "公众号「市井食光」2026年10月成长档案",
+  "period": "2026年10月",
+  "metrics": [
+    {
+      "name": "粉丝净增",
+      "cur": 1890,
+      "prev": 1120,
+      "unit": "人",
+      "mom_text": "+68.8%",
+      "significant": true
+    },
+    {
+      "name": "篇均阅读",
+      "cur": 4350,
+      "prev": 3610,
+      "unit": "次",
+      "mom_text": "+20.5%",
+      "significant": true
+    },
+    {
+      "name": "在看+赞合计率",
+      "cur": 3.8,
+      "prev": 3.1,
+      "unit": "%",
+      "mom_text": "0.7pp",
+      "significant": true
+    },
+    {
+      "name": "流量主收入",
+      "cur": 612,
+      "prev": 485,
+      "unit": "元",
+      "mom_text": "+26.2%",
+      "significant": true
+    },
+    {
+      "name": "发文数",
+      "cur": 9,
+      "prev": 8,
+      "unit": "篇",
+      "mom_text": "+12.5%",
+      "significant": true
+    }
+  ],
+  "series": [
+    {
+      "name": "街坊小店探访",
+      "videos": 4,
+      "avg_reads": 5820,
+      "share_of_top": 100.0,
+      "tier": "高档"
+    },
+    {
+      "name": "家常菜谱",
+      "videos": 3,
+      "avg_reads": 3940,
+      "share_of_top": 67.7,
+      "tier": "高档"
+    },
+    {
+      "name": "外卖测评",
+      "videos": 2,
+      "avg_reads": 1980,
+      "share_of_top": 34.0,
+      "tier": "低档"
+    }
+  ],
+  "flags": {
+    "series_gap_x": 2.9,
+    "hit": true,
+    "overall_avg_reads": 3913
+  },
+  "risk_log": [
+    "10.20 因图片版权问题被投诉 1 次，已删除处理（对外版保留此记录）"
+  ],
+  "publish_note": "对外分享版收入类数字聚合为档位（如 500~1000元）",
+  "thresholds": {
+    "significant_mom_pct": 10.0,
+    "series_gap_x": 2.0,
+    "hit_mult": 2.0
+  },
+  "note": "数值由脚本计算；成长叙事措辞由模型按 prompt.txt 完成"
+}

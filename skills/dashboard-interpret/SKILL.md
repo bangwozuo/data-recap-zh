@@ -11,11 +11,11 @@
 | 复杂度 | `M` |
 | 阶段 | `P1` |
 | 复用度 | 中（4 私域转化漏斗可并入同一报表） |
-| 资产形态 | 纯提示词（无运行时依赖） |
+| 资产形态 | 提示词 + Python 脚本（`scripts/dashboard_interpret.py`，仅标准库） |
 
 ## 能力描述
 
-各平台后台数据的归一化解读
+各平台后台数据的归一化解读。量化核对口径：同一指标两来源相对差异 ≤ 5% 判「口径吻合」、5%~15% 判「口径接近」、> 15% 判「口径冲突」（禁止并表）；缺失指标记「—」不补零；官方合计与第三方去重差异 < 15% 属正常重叠。
 
 ## 输入规格
 
@@ -29,6 +29,14 @@
 
 - `normalized`：归一后的可比对数据
 - `caveats`：各来源口径不一致之处与处理方式
+
+**脚本产物**（`--demo` 或 `--input` 实跑落盘，数值以此为准）：
+
+| 文件 | 内容 |
+|---|---|
+| `out/统一数据表.csv` | 统一指标 × 各来源值 × 口径说明 |
+| `out/normalized.json` | 机器可读结果（统一表 + 交叉核对） |
+| `out/口径差异说明.md` | 交叉核对结论（Markdown 表格） |
 
 ## 使用步骤
 
@@ -48,6 +56,15 @@
 | **Dify** | 新建应用 → 提示词编排 → 粘贴 `prompt.txt` |
 | **Claude** | 新建 Project → Instructions → 粘贴 `prompt.txt` |
 | **ChatGPT** | 新建 GPT → Instructions → 粘贴 `prompt.txt` |
+
+### 方式三：带脚本（推荐，产出真实文件）
+
+```bash
+python <SKILL_DIR>/scripts/dashboard_interpret.py --input input.json --outdir out
+python <SKILL_DIR>/scripts/dashboard_interpret.py --demo --outdir out   # 无输入也能看效果
+```
+
+**分工**：脚本做**字段归一、单位换算、交叉核对、产物落盘**（out/ 统一数据表.csv、normalized.json、口径差异说明.md）；模型做**口径差异的业务解释与修正建议**。数值一律以脚本输出为准。
 
 ## 边界（不做的事）
 
