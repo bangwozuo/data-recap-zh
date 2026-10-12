@@ -4,8 +4,7 @@
 
 ![数据复盘师 · 动态演示](docs/assets/hero.gif)
 
-*▲ 实时演示（自动循环）· [▶ 观看完整版合集视频](docs/demo.mp4)*
-
+*▲ 真实执行录播（自动循环播放）· [▶ 观看完整版合集视频](docs/demo.mp4)*
 
 [![Stage](https://img.shields.io/badge/stage-P1-orange)](https://github.com/bangwozuo)
 [![Asset](https://img.shields.io/badge/asset-prompt--only-blueviolet)](#资产形态)
@@ -113,12 +112,12 @@ data-recap-zh/
 
 | # | 技能 | 能力族 | 复杂度 | 提示词 | 文档 |
 |---|------|--------|--------|--------|------|
-| 1 | 数据看板解读 | — | `M` | [prompt.txt](skills/dashboard-interpret/prompt.txt) | [docs](skills/dashboard-interpret/docs/) |
-| 2 | 归因分析 | 分析诊断 | `M` | [prompt.txt](skills/attribution-analysis/prompt.txt) | [docs](skills/attribution-analysis/docs/) |
-| 3 | 策略建议生成 | — | `S` | [prompt.txt](skills/strategy-advice-generate/prompt.txt) | [docs](skills/strategy-advice-generate/docs/) |
-| 4 | 报告排版 | 报告简报 | `S` | [prompt.txt](skills/report-layout/prompt.txt) | [docs](skills/report-layout/docs/) |
-| 5 | 爆款结构拆解 | — | `S` | [prompt.txt](skills/viral-structure-decode/prompt.txt) | [docs](skills/viral-structure-decode/docs/) |
-| 6 | 选题知识库 | — | `S` | [prompt.txt](skills/topic-knowledge-base/prompt.txt) | [docs](skills/topic-knowledge-base/docs/) |
+| 1 | 数据看板解读 | 数据归一 | `M` | [prompt.txt](skills/dashboard-interpret/prompt.txt) | [docs](skills/dashboard-interpret/docs/) |
+| 2 | 归因分析 | 归因诊断 | `M` | [prompt.txt](skills/attribution-analysis/prompt.txt) | [docs](skills/attribution-analysis/docs/) |
+| 3 | 策略建议生成 | 流程与方案设计 | `S` | [prompt.txt](skills/strategy-advice-generate/prompt.txt) | [docs](skills/strategy-advice-generate/docs/) |
+| 4 | 报告排版 | 报告与简报 | `S` | [prompt.txt](skills/report-layout/prompt.txt) | [docs](skills/report-layout/docs/) |
+| 5 | 爆款结构拆解 | 大纲与结构模板 | `S` | [prompt.txt](skills/viral-structure-decode/prompt.txt) | [docs](skills/viral-structure-decode/docs/) |
+| 6 | 选题知识库 | 连接器数据读写 | `S` | [prompt.txt](skills/topic-knowledge-base/prompt.txt) | [docs](skills/topic-knowledge-base/docs/) |
 
 ## 工作流清单（4 条）
 
