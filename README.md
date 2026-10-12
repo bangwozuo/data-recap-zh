@@ -110,23 +110,23 @@ data-recap-zh/
 
 ## 技能清单（6 个）
 
-| # | 技能 | 能力族 | 复杂度 | 提示词 | 文档 |
-|---|------|--------|--------|--------|------|
-| 1 | 数据看板解读 | 数据归一 | `M` | [prompt.txt](skills/dashboard-interpret/prompt.txt) | [docs](skills/dashboard-interpret/docs/) |
-| 2 | 归因分析 | 归因诊断 | `M` | [prompt.txt](skills/attribution-analysis/prompt.txt) | [docs](skills/attribution-analysis/docs/) |
-| 3 | 策略建议生成 | 流程与方案设计 | `S` | [prompt.txt](skills/strategy-advice-generate/prompt.txt) | [docs](skills/strategy-advice-generate/docs/) |
-| 4 | 报告排版 | 报告与简报 | `S` | [prompt.txt](skills/report-layout/prompt.txt) | [docs](skills/report-layout/docs/) |
-| 5 | 爆款结构拆解 | 大纲与结构模板 | `S` | [prompt.txt](skills/viral-structure-decode/prompt.txt) | [docs](skills/viral-structure-decode/docs/) |
-| 6 | 选题知识库 | 连接器数据读写 | `S` | [prompt.txt](skills/topic-knowledge-base/prompt.txt) | [docs](skills/topic-knowledge-base/docs/) |
+| # | 技能 | 能力族 | 复杂度 | 说明文档 |
+|---|------|--------|--------|----------|
+| 1 | 数据看板解读 | 数据归一 | `M` | [README](skills/dashboard-interpret/README.md) |
+| 2 | 归因分析 | 归因诊断 | `M` | [README](skills/attribution-analysis/README.md) |
+| 3 | 策略建议生成 | 流程与方案设计 | `S` | [README](skills/strategy-advice-generate/README.md) |
+| 4 | 报告排版 | 报告与简报 | `S` | [README](skills/report-layout/README.md) |
+| 5 | 爆款结构拆解 | 大纲与结构模板 | `S` | [README](skills/viral-structure-decode/README.md) |
+| 6 | 选题知识库 | 连接器数据读写 | `S` | [README](skills/topic-knowledge-base/README.md) |
 
 ## 工作流清单（4 条）
 
-| # | 工作流 | 阶段 | 复杂度 | 触发 | 定义 | 文档 |
-|---|--------|------|--------|------|------|------|
-| 1 | 周度数据汇总 | `P1` | `M` | 定时（每周日） | [SKILL.md](workflows/weekly-data-aggregate-flow/SKILL.md) | [docs](workflows/weekly-data-aggregate-flow/docs/) |
-| 2 | 爆款/扑街归因 | `P1` | `M` | 事件（WF1 后自动） | [SKILL.md](workflows/hit-flop-attribution-flow/SKILL.md) | [docs](workflows/hit-flop-attribution-flow/docs/) |
-| 3 | 下周内容策略建议 | `P1` | `S` | 事件（WF2 后自动） | [SKILL.md](workflows/nextweek-content-strategy-flow/SKILL.md) | [docs](workflows/nextweek-content-strategy-flow/docs/) |
-| 4 | 月度成长报告 | `P2` | `S` | 定时（每月 1 日） | [SKILL.md](workflows/monthly-growth-report-flow/SKILL.md) | [docs](workflows/monthly-growth-report-flow/docs/) |
+| # | 工作流 | 阶段 | 复杂度 | 触发 | 说明文档 |
+|---|--------|------|--------|------|----------|
+| 1 | 周度数据汇总 | `P1` | `M` | 定时（每周日） | [README](workflows/weekly-data-aggregate-flow/README.md) |
+| 2 | 爆款/扑街归因 | `P1` | `M` | 事件（WF1 后自动） | [README](workflows/hit-flop-attribution-flow/README.md) |
+| 3 | 下周内容策略建议 | `P1` | `S` | 事件（WF2 后自动） | [README](workflows/nextweek-content-strategy-flow/README.md) |
+| 4 | 月度成长报告 | `P2` | `S` | 定时（每月 1 日） | [README](workflows/monthly-growth-report-flow/README.md) |
 
 ---
 
